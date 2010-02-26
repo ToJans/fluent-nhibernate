@@ -51,7 +51,7 @@ namespace FluentNHibernate.Automapping
             // to see which properties have already been mapped
             ApplyOverrides(classType, mappedProperties, mapping);
 
-            entityAutomapper.Map(mapping, classType, mappedProperties);
+            //entityAutomapper.Map(mapping, classType, mappedProperties);
 
             if (mappingTypes != null)
                 MapInheritanceTree(classType, mapping, mappedProperties);
@@ -118,7 +118,7 @@ namespace FluentNHibernate.Automapping
             subclass.Name = inheritedClass.Type.AssemblyQualifiedName;
             subclass.Type = inheritedClass.Type;
             ApplyOverrides(inheritedClass.Type, mappedProperties, (ClassMappingBase)subclass);
-            entityAutomapper.Map((ClassMappingBase)subclass, inheritedClass.Type, mappedProperties);
+            //entityAutomapper.Map((ClassMappingBase)subclass, inheritedClass.Type, mappedProperties);
             inheritedClass.IsMapped = true;
         }
 
